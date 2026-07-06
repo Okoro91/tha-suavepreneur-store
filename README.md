@@ -26,6 +26,62 @@
 ## Brand Details
 
 **Tha Suavepreneur**
+
 - Modest outfits | Made to measure | Tailoring brand
 - Lagos, Nigeria
 - Classy and elegant modest fashion
+
+tha-suavepreneur-shopping-cart/
+├── public/
+│ └── \_redirects
+├── src/
+│ ├── assets/
+│ ├── components/
+│ │ ├── Navbar/
+│ │ │ ├── Navbar.jsx
+│ │ │ └── Navbar.module.css
+│ │ ├── ProductCard/
+│ │ │ ├── ProductCard.jsx
+│ │ │ └── ProductCard.module.css
+│ │ └── CartItem/
+│ │ ├── CartItem.jsx
+│ │ └── CartItem.module.css
+│ ├── pages/
+│ │ ├── Home/
+│ │ │ ├── Home.jsx
+│ │ │ └── Home.module.css
+│ │ ├── Shop/
+│ │ │ ├── Shop.jsx
+│ │ │ └── Shop.module.css
+│ │ └── Cart/
+│ │ ├── Cart.jsx
+│ │ └── Cart.module.css
+│ ├── context/
+│ │ └── CartContext.jsx
+│ ├── services/
+│ │ └── api.js
+│ ├── test/ # All tests centralized here
+│ │ ├── setup.js
+│ │ ├── components/
+│ │ │ ├── Navbar.test.jsx
+│ │ │ ├── ProductCard.test.jsx
+│ │ │ └── CartItem.test.jsx
+│ │ ├── pages/
+│ │ │ ├── Home.test.jsx
+│ │ │ ├── Shop.test.jsx
+│ │ │ └── Cart.test.jsx
+│ │ ├── context/
+│ │ │ └── CartContext.test.jsx
+│ │ └── services/
+│ │ └── api.test.js
+│ ├── App.jsx
+│ ├── App.module.css
+│ ├── Routes.jsx
+│ ├── main.jsx
+│ └── index.css
+├── index.html
+├── package.json
+├── vite.config.js
+├── vitest.config.js
+├── vercel.json
+└── .gitignore

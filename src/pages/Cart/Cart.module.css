@@ -1,0 +1,16 @@
+.cart {
+  padding: 2rem;
+}
+
+.cart h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cart p {
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+}

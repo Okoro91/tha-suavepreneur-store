@@ -1,0 +1,199 @@
+.home {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  background: linear-gradient(to bottom, rgba(212, 175, 55, 0.05), transparent);
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.goldText {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--dark-grey);
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.location {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  margin-top: 2rem;
+}
+
+.whatsappBtn {
+  display: inline-block;
+  background: var(--gold-gradient);
+  color: var(--black);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: var(--shadow-gold);
+}
+
+.whatsappBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+.featureCard {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-gold);
+  border-color: var(--gold-primary);
+}
+
+.featureIcon {
+  color: var(--gold-primary);
+  margin-bottom: 1rem;
+}
+
+.featureCard h3 {
+  color: var(--black);
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.featureCard p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.aboutSection {
+  margin: 4rem 0;
+  padding: 3rem;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--gold-gradient);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.aboutText {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.serviceItem {
+  padding: 1.5rem;
+  background: var(--light-grey);
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.serviceItem:hover {
+  transform: scale(1.05);
+  background: var(--gold-light);
+}
+
+.serviceIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.serviceItem h4 {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aboutSection {
+    padding: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
