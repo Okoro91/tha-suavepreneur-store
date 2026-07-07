@@ -13,7 +13,14 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <Link to="/" className={styles.logo}>
-          Tha Suavepreneur
+          <img
+            src={
+              "https://res.cloudinary.com/okoro91/image/upload/v1783455094/Tha_Suavepreneur/tha_logo.png"
+            }
+            alt="Tha Suavepreneur Logo"
+            className={styles.logoImage}
+          />
+          <span className={styles.logoText}>Tha Suavepreneur</span>
         </Link>
         <div className={styles.navLinks}>
           <Link
