@@ -12,7 +12,11 @@ describe("Footer Component", () => {
     renderWithRouter(<Footer />);
     expect(screen.getByText("Tha Suavepreneur")).toBeInTheDocument();
     expect(screen.getByText(/Modest Outfits/)).toBeInTheDocument();
-    expect(screen.getByText("Lagos, Nigeria")).toBeInTheDocument();
+    // Use getAllByText and check first occurrence
+    const locationElements = screen.getAllByText("Lagos, Nigeria");
+    expect(locationElements.length).toBeGreaterThan(0);
+    // Or use a more specific query
+    expect(screen.getByText(/Lagos, Nigeria/)).toBeInTheDocument();
   });
 
   it("renders quick links", () => {

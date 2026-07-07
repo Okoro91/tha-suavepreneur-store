@@ -12,7 +12,9 @@ export default defineConfig({
       provider: "v8",
       reporter: ["text", "json", "html"],
     },
-
+    // Include all test files from the test folder
     include: ["src/test/**/*.{test,spec}.{js,jsx}"],
+    // Exclude node_modules
+    exclude: ["node_modules", "dist"],
   },
 });

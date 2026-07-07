@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, beforeEach } from "vitest";
 import { MemoryRouter } from "react-router";
@@ -26,9 +27,9 @@ const PrePopulatedCart = () => {
   };
 
   // Add items on render
-  React.useEffect(() => {
+  useEffect(() => {
     addToCart(product, 2);
-  }, []);
+  }, [addToCart]);
 
   return <Cart />;
 };

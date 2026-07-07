@@ -1,15 +1,5 @@
 import { Link } from "react-router";
-import {
-  //   FaInstagram,
-  //   Twitter,
-  //   FaFacebook,
-  Mail,
-  Phone,
-  MapPin,
-  Crown,
-  Scissors,
-  Ruler,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Crown, Scissors, Ruler } from "lucide-react";
 import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import styles from "./Footer.module.css";
 
@@ -19,7 +9,6 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
-        {/* Brand Section */}
         <div className={styles.footerSection}>
           <h3 className={styles.footerBrand}>
             <span className={styles.goldText}>Tha Suavepreneur</span>

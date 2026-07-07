@@ -2,15 +2,19 @@ import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router";
 import { describe, it, expect } from "vitest";
 import Navbar from "../../components/Navbar/Navbar";
+import { CartProvider } from "../../context/CartContext";
 
-// Wrapper component for Router context
-const renderWithRouter = (component) => {
-  return render(<BrowserRouter>{component}</BrowserRouter>);
+const renderWithProviders = (component) => {
+  return render(
+    <BrowserRouter>
+      <CartProvider>{component}</CartProvider>
+    </BrowserRouter>,
+  );
 };
 
 describe("Navbar Component", () => {
   it("renders all navigation links", () => {
-    renderWithRouter(<Navbar />);
+    renderWithProviders(<Navbar />);
     expect(screen.getByText("Tha Suavepreneur")).toBeInTheDocument();
     expect(screen.getByText("Home")).toBeInTheDocument();
     expect(screen.getByText("Shop")).toBeInTheDocument();
