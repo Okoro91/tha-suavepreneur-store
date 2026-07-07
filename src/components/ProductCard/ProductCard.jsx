@@ -4,9 +4,9 @@ import { ShoppingCart, Plus, Minus } from "lucide-react";
 import { useCart } from "../../context/CartContext";
 import styles from "./ProductCard.module.css";
 
-const ProductCard = () => {
-  const [quantity, setQuantity] = useState();
-  const { addTocart } = useCart();
+const ProductCard = ({ product }) => {
+  const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
 
   const handleQuantityChange = (e) => {
     const value = parseInt(e.target.value);
