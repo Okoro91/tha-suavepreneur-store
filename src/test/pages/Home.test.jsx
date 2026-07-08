@@ -26,10 +26,24 @@ describe("Home Page", () => {
 
   it("displays services section", () => {
     renderWithRouter(<Home />);
-    expect(screen.getByText("Our Tailoring Excellence")).toBeInTheDocument();
+    // Use a more flexible matcher for text with nested elements
+    expect(
+      screen.getByText((content, element) => {
+        return element?.textContent === "Our Tailoring Excellence";
+      }),
+    ).toBeInTheDocument();
+
     expect(screen.getByText("Bridal Collections")).toBeInTheDocument();
-    expect(screen.getByText("Corporate Wear")).toBeInTheDocument();
-    expect(screen.getByText("Traditional Attire")).toBeInTheDocument();
-    expect(screen.getByText("Occasion Wear")).toBeInTheDocument();
+
+    const corporateWear = screen.getAllByText(/Corporate Wear/i);
+    expect(corporateWear).toHaveLength(2);
+
+    const traditionalAttire = screen.getAllByText(/Traditional Attire/i);
+    expect(traditionalAttire).toHaveLength(2);
+
+    const OccasionWear = screen.getAllByText(/Occasion Wear/i);
+    expect(OccasionWear).toHaveLength(2);
+
+    // expect(screen.getByText("Occasion Wear")).toBeInTheDocument();
   });
 });

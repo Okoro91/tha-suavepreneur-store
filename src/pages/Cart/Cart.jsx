@@ -9,6 +9,7 @@ import {
   CreditCard,
 } from "lucide-react";
 import { useCart } from "../../context/CartContext";
+import CartItem from "../../components/CartItem/CartItem";
 import styles from "./Cart.module.css";
 
 const Cart = () => {
@@ -83,64 +84,12 @@ const Cart = () => {
       <div className={styles.cartContent}>
         <div className={styles.cartItems}>
           {cartItems.map((item) => (
-            <div key={item.id} className={styles.cartItem}>
-              <div className={styles.itemImage}>
-                <img src={item.image} alt={item.title} />
-              </div>
-
-              <div className={styles.itemDetails}>
-                <h3 className={styles.itemTitle}>{item.title}</h3>
-                <p className={styles.itemCategory}>{item.category}</p>
-                <div className={styles.itemPrice}>
-                  {formatPrice(item.price)}
-                </div>
-              </div>
-
-              <div className={styles.itemControls}>
-                <div className={styles.quantityControls}>
-                  <button
-                    className={styles.quantityBtn}
-                    onClick={() => decrementQuantity(item.id, item.quantity)}
-                    aria-label="Decrease quantity"
-                  >
-                    <Minus size={16} />
-                  </button>
-                  <input
-                    type="number"
-                    min="1"
-                    value={item.quantity}
-                    onChange={(e) =>
-                      handleQuantityChange(item.id, e.target.value)
-                    }
-                    className={styles.quantityInput}
-                    aria-label="Quantity"
-                  />
-                  <button
-                    className={styles.quantityBtn}
-                    onClick={() => incrementQuantity(item.id, item.quantity)}
-                    aria-label="Increase quantity"
-                  >
-                    <Plus size={16} />
-                  </button>
-                </div>
-
-                <button
-                  className={styles.removeBtn}
-                  onClick={() => removeFromCart(item.id)}
-                  aria-label="Remove item"
-                >
-                  <Trash2 size={18} />
-                  Remove
-                </button>
-              </div>
-
-              <div className={styles.itemTotal}>
-                <span className={styles.totalLabel}>Total:</span>
-                <span className={styles.totalPrice}>
-                  {formatPrice(item.price * item.quantity)}
-                </span>
-              </div>
-            </div>
+            <CartItem
+              key={item.id}
+              item={item}
+              updateQuantity={updateQuantity}
+              removeFromCart={removeFromCart}
+            />
           ))}
         </div>
 
