@@ -12,10 +12,9 @@ describe("Footer Component", () => {
     renderWithRouter(<Footer />);
     expect(screen.getByText("Tha Suavepreneur")).toBeInTheDocument();
     expect(screen.getByText(/Modest Outfits/)).toBeInTheDocument();
-    // Use getAllByText and check length
+
     const locationElements = screen.getAllByText(/Lagos, Nigeria/);
-    expect(locationElements.length).toBe(2); // Both instances should exist
-    // Both are valid - one in brand section, one in contact section
+    expect(locationElements.length).toBe(2);
   });
 
   it("renders quick links", () => {

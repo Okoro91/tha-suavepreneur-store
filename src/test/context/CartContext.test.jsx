@@ -2,7 +2,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, beforeEach } from "vitest";
 import { CartProvider, useCart } from "../../context/CartContext";
 
-// Test component to use cart context
 function TestComponent() {
   const {
     cartItems,
@@ -37,9 +36,7 @@ function TestComponent() {
 }
 
 describe("CartContext", () => {
-  beforeEach(() => {
-    // Reset any state between tests
-  });
+  beforeEach(() => {});
 
   it("should initialize with empty cart", () => {
     render(

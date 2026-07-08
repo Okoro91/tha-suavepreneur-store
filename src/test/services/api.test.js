@@ -5,7 +5,6 @@ import {
   fetchCategories,
 } from "../../services/api";
 
-// Mock fetch globally
 const mockFetch = vi.fn();
 global.fetch = mockFetch;
 

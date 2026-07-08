@@ -5,7 +5,6 @@ import { MemoryRouter } from "react-router";
 import Cart from "../../pages/Cart/Cart";
 import { CartProvider, useCart } from "../../context/CartContext";
 
-// Test component to setup cart state
 const TestWrapper = ({ children }) => {
   return (
     <MemoryRouter>
@@ -14,7 +13,6 @@ const TestWrapper = ({ children }) => {
   );
 };
 
-// Component to pre-populate cart
 const PrePopulatedCart = () => {
   const { addToCart } = useCart();
   const product = {
@@ -26,7 +24,6 @@ const PrePopulatedCart = () => {
     rating: { rate: 4.5 },
   };
 
-  // Add items on render
   useEffect(() => {
     addToCart(product, 2);
   }, [addToCart]);
@@ -53,7 +50,6 @@ describe("Cart Page", () => {
       </TestWrapper>,
     );
 
-    // Wait for items to render
     expect(await screen.findByText("Elegant Dress")).toBeInTheDocument();
     expect(screen.getByDisplayValue("2")).toBeInTheDocument();
     expect(screen.getByText(/Order Summary/)).toBeInTheDocument();
@@ -66,11 +62,9 @@ describe("Cart Page", () => {
       </TestWrapper>,
     );
 
-    // Find and increment quantity
     const incrementBtn = await screen.findByLabelText("Increase quantity");
     fireEvent.click(incrementBtn);
 
-    // Check quantity updated
     const quantityInput = screen.getByDisplayValue("3");
     expect(quantityInput).toBeInTheDocument();
   });
@@ -82,12 +76,10 @@ describe("Cart Page", () => {
       </TestWrapper>,
     );
 
-    // Decrement twice to remove item
     const decrementBtn = await screen.findByLabelText("Decrease quantity");
     fireEvent.click(decrementBtn);
     fireEvent.click(decrementBtn);
 
-    // Check empty cart message
     expect(await screen.findByText("Your Cart is Empty")).toBeInTheDocument();
   });
 
@@ -98,11 +90,9 @@ describe("Cart Page", () => {
       </TestWrapper>,
     );
 
-    // Click clear cart
     const clearBtn = await screen.findByText("Clear Cart");
     fireEvent.click(clearBtn);
 
-    // Check empty cart message
     expect(await screen.findByText("Your Cart is Empty")).toBeInTheDocument();
   });
 });

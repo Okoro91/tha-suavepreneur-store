@@ -26,7 +26,7 @@ describe("Home Page", () => {
 
   it("displays services section", () => {
     renderWithRouter(<Home />);
-    // Use a more flexible matcher for text with nested elements
+
     expect(
       screen.getByText((content, element) => {
         return element?.textContent === "Our Tailoring Excellence";
@@ -43,7 +43,5 @@ describe("Home Page", () => {
 
     const OccasionWear = screen.getAllByText(/Occasion Wear/i);
     expect(OccasionWear).toHaveLength(2);
-
-    // expect(screen.getByText("Occasion Wear")).toBeInTheDocument();
   });
 });

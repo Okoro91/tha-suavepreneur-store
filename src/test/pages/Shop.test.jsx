@@ -33,10 +33,8 @@ describe("Shop Page", () => {
   it("renders shop page with products", async () => {
     renderWithProviders(<Shop />);
 
-    // Check for loading state
     expect(screen.getByText("Loading our collection...")).toBeInTheDocument();
 
-    // Wait for products to load
     await waitFor(() => {
       expect(screen.getByText("Our Collection")).toBeInTheDocument();
       expect(screen.getByText("Elegant Dress")).toBeInTheDocument();

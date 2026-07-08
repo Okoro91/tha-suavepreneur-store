@@ -2,7 +2,6 @@ import { Crown, Scissors, Ruler, Sparkles, ArrowRight } from "lucide-react";
 import styles from "./Home.module.css";
 
 const Home = () => {
-  // Replace these with your actual Cloudinary image URLs
   const heroImage =
     "https://res.cloudinary.com/okoro91/image/upload/v1783431309/Tha_Suavepreneur/IMG_20260623_074241_396.jpg";
   const featureImages = [
@@ -18,7 +17,6 @@ const Home = () => {
     "https://res.cloudinary.com/okoro91/image/upload/v1783431325/Tha_Suavepreneur/IMG_20260623_075756_619.jpg",
   ];
 
-  // Service images
   const serviceImages = [
     "https://res.cloudinary.com/okoro91/image/upload/v1783431015/Tha_Suavepreneur/IMG_20241128_114727_448.jpg",
     "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=300",
@@ -28,7 +26,6 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
-      {/* Hero Section with Image */}
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
@@ -55,7 +52,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Feature Cards with Images */}
       <div className={styles.featuresSection}>
         <h2 className={styles.sectionTitle}>
           Why Choose <span className={styles.goldText}>Us</span>
@@ -106,7 +102,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Gallery Showcase */}
       <div className={styles.gallerySection}>
         <h2 className={styles.sectionTitle}>
           Our <span className={styles.goldText}>Collections</span>
@@ -146,7 +141,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* About Section with Service Images */}
       <div className={styles.aboutSection}>
         <div className={styles.aboutContent}>
           <div className={styles.aboutText}>
