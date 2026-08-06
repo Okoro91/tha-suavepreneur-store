@@ -7,7 +7,7 @@
 
 A modern e-commerce shopping cart application for **Tha Suavepreneur** – a premium modest fashion and made-to-measure tailoring brand based in Lagos, Nigeria.
 
-![Tha Suavepreneur Store Preview](https://tha-suavepreneur-store.pages.dev/)
+![Tha Suavepreneur Store Preview](./src/assets/preview.png)
 
 ## ✨ Features
 
