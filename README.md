@@ -47,6 +47,7 @@ A modern e-commerce shopping cart application for **Tha Suavepreneur** – a pre
 
 ## 📁 Project Structure
 
+```
 tha-suavepreneur-store/
 ├── public/
 │ └── \_redirects # SPA routing configuration
@@ -78,7 +79,7 @@ tha-suavepreneur-store/
 ├── vite.config.js
 ├── vitest.config.js
 └── vercel.json # Vercel deployment config
-text
+```
 
 ## 🚀 Getting Started
 
